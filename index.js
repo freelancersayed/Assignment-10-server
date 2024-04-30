@@ -6,7 +6,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // middeleware
-app.use(cors());
+app.use(cors(
+  {
+    orgin: ["http://localhost:5173","https://tour-of-south-asia-server.vercel.app",  ]
+  }
+));
 app.use(express.json());
 
 
